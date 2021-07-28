@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <conip.h>
+
+int main()
+{
+    int number,i,j;
+    
+    do
+    {
+        printf("Enter number: ");
+        scanf("%d",&number);
+        
+        for(i=1;i<=number;i++)
+        {
+            for(j=number-i;j>0;j--)
+            {
+                printf(" ");
+            }
+            for(j=0;j<i;j++)
+            {
+                printf(" *");
+            }
+            printf("\n");
+        }
+        if(number<=0)
+        {
+            printf("Invalid Input! Try Again.\n") ;
+        }
+    }while(number<=0);
+    return 0;
+}
